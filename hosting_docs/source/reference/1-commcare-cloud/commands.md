@@ -33,7 +33,7 @@ commcare-cloud [--control] [--control-setup {yes,no}]
 
 server environment to run against
 
-## Optional Arguments
+## Options
 
 ### `--control`
 
@@ -520,7 +520,7 @@ Some actions do not make sense in Ad-Hoc (include, meta, etc)
 Track an infrastructure maintainance event in Datadog
 
 ```
-commcare-cloud <env> send-datadog-event [--tags [TAGS [TAGS ...]]] [--alert_type {error,warning,info,success}]
+commcare-cloud <env> send-datadog-event [--tags [TAGS ...]] [--alert_type {error,warning,info,success}]
                                         event_title event_text
 ```
 
@@ -536,7 +536,7 @@ Text content of the datadog event.
 
 ##### Options
 
-###### `--tags [TAGS [TAGS ...]]`
+###### `--tags [TAGS ...]`
 
 Additional tags e.g. host:web2
 
@@ -1116,7 +1116,7 @@ Deploy CommCare
 
 ```
 commcare-cloud <env> deploy [--resume] [--skip-record] [--commcare-rev COMMCARE_REV] [--set FAB_SETTINGS]
-                            [{commcare,formplayer} [{commcare,formplayer} ...]]
+                            [{commcare,formplayer} ...]
 ```
 
 ##### Positional Arguments
