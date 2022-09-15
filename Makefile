@@ -16,7 +16,7 @@ src/commcare_cloud/help_cache/ansible-playbook.txt:
 	$(ANSIBLE_ENV) ansible-playbook -h | sed 's/^optional arguments:/options:/' > src/commcare_cloud/help_cache/ansible-playbook.txt
 
 hosting_docs/source/reference/1-commcare-cloud/commands.md : src/commcare_cloud/* src/commcare_cloud/*/* src/commcare_cloud/*/*/*
-	manage-commcare-cloud make-docs > hosting_docs/source/reference/1-commcare-cloud/commands.md
+	manage-commcare-cloud make-docs | sed 's/^##### Optional Arguments/##### Options/' > hosting_docs/source/reference/1-commcare-cloud/commands.md
 
 
 hosting_docs/source/changelog/%.md : changelog/%.yml src/commcare_cloud/manage_commcare_cloud/*
